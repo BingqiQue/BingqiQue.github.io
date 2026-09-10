@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GabrielQue 的个人摄影空间。静静观看，光影与日常。当前照片为注明来源的展示样片。">
+  <meta name="theme-color" content="#ffffff">
+  <title>GabrielQue — Photography</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="photos.js" defer></script>
+  <script src="gallery.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#works">跳至摄影作品</a>
+  <header class="header">
+    <a class="wordmark" href="#" aria-label="GabrielQue 首页">GQ</a>
+    <p class="header-note">个人摄影集 <span>PHOTOGRAPHY PORTFOLIO</span></p>
+    <a class="nav-link" href="#works">作品 <span>Works</span></a>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="name">
+      <div class="intro-top"><span>以照片，留住片刻。</span><span class="edition">A PERSONAL PHOTO JOURNAL</span></div>
+      <h1 id="name">GabrielQue<span class="title-period">.</span></h1>
+      <div class="intro-bottom"><p>光影之间，日常之外。</p><a href="#works">浏览影集 <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <section id="works" class="works" aria-label="摄影作品">
+      <div class="section-label"><h2>影像选集 <span>SELECTED FRAMES</span></h2><span>01 — 04</span></div>
+      <div class="gallery" id="gallery"></div>
+    </section>
+    <aside class="sample-note"><span class="note-label">关于这组影像</span><p>当前照片为版式展示样片，来源见各图署名，非 GabrielQue 本人作品。</p></aside>
+  </main>
+  <footer><a class="footer-name" href="#">GabrielQue.</a><span>PHOTOGRAPHY / 光影记录</span><a href="#">回到顶部 ↑</a></footer>
+  <dialog id="viewer" aria-label="照片大图查看器">
+    <button class="close" type="button" aria-label="关闭大图">关闭 <span aria-hidden="true">×</span></button>
+    <div class="viewer-stage"><button class="previous" type="button" aria-label="上一张照片">←</button><img id="viewer-photo" alt=""><button class="next" type="button" aria-label="下一张照片">→</button></div>
+    <div class="viewer-caption"><p id="viewer-title"></p><span id="viewer-count"></span></div>
+  </dialog>
+</body>
+</html>

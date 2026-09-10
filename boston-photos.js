@@ -92,41 +92,34 @@ const PHOTOS = [
   },
   {
     "number": 14,
-    "src": "boston-collection-14.jpg",
-    "alt": "A red-brick corner building with an ornate clock tower above a city street",
-    "width": 1600,
-    "height": 2400
-  },
-  {
-    "number": 15,
     "src": "boston-collection-15.jpg",
     "alt": "Two people sitting beside the river in warm evening light",
     "width": 1600,
     "height": 2400
   },
   {
-    "number": 16,
+    "number": 15,
     "src": "boston-collection-16.jpg",
     "alt": "A windsurfer with an orange sail on the river",
     "width": 1600,
     "height": 2400
   },
   {
-    "number": 17,
+    "number": 16,
     "src": "boston-collection-17.jpg",
     "alt": "People gathered by the river beneath a pink sunset",
     "width": 2400,
     "height": 1600
   },
   {
-    "number": 18,
+    "number": 17,
     "src": "boston-collection-18.jpg",
     "alt": "A person sitting at the edge of the river",
     "width": 1600,
     "height": 2400
   },
   {
-    "number": 19,
+    "number": 18,
     "src": "boston-collection-19.jpg",
     "alt": "A golden sunset behind city buildings across the water",
     "width": 2400,

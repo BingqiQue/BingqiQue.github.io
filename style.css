@@ -2,3 +2,6 @@
 
 /* Collection covers and paired landscapes. */
 .collections{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6%;align-items:end}.collections .cover>img{max-height:520px;max-height:min(520px,60svh);width:auto;max-width:100%}.photo-row.equal{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:700px){.collections{grid-template-columns:1fr;gap:48px}.collections .cover>img{max-height:75svh}.photo-row.equal{grid-template-columns:1fr}}
+
+/* Three collection covers on wide screens. */
+@media(min-width:1000px){.collections{grid-template-columns:repeat(3,minmax(0,1fr));gap:4%}.collections .cover-caption{align-items:flex-start;gap:12px;flex-wrap:wrap}.collections .cover-caption h2{font-size:32px}.collections .cover-caption b{margin-left:14px}}

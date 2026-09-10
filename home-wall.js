@@ -1,8 +1,14 @@
 'use strict';
 // Every active photograph belongs to one column at every viewport width.
 function distributeWallPhotos(photos,count){return Array.from({length:count},(_,column)=>photos.filter((photo,index)=>index%count===column));}
+function shuffleWallPhotos(photos){
+ for(let i=photos.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[photos[i],photos[j]]=[photos[j],photos[i]];}
+ return photos;
+}
 const wall=document.querySelector('.photo-wall');
 const originals=Array.from(wall.querySelectorAll('.wall-group:first-child .wall-shot')).sort((a,b)=>Number(a.dataset.wallIndex)-Number(b.dataset.wallIndex));
+// Shuffle once per visit; resizing keeps this visit's ordering.
+shuffleWallPhotos(originals);
 let columnCount=0,resizeFrame=0;
 function layoutWall(){
  const count=window.innerWidth<=600?3:window.innerWidth<=1100?4:6;
@@ -25,6 +31,8 @@ function layoutWall(){
 }
 window.addEventListener('resize',()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(layoutWall);});
 layoutWall();
+// Returning through browser history can restore the page without reloading it.
+window.addEventListener('pageshow',event=>{if(event.persisted){shuffleWallPhotos(originals);columnCount=0;layoutWall();updateMotion();}});
 // Avoid running decorative motion while the page is in the background.
 function updateMotion(){document.documentElement.classList.toggle('motion-paused',document.hidden);}
 document.addEventListener('visibilitychange',updateMotion);

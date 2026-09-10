@@ -47,5 +47,12 @@ const PHOTOS = [
     "alt": "A pink flower against green foliage",
     "width": 2400,
     "height": 1600
+  },
+  {
+    "number": 8,
+    "src": "dc-collection-08.jpg",
+    "alt": "A red-brick corner building with an ornate clock tower above a city street",
+    "width": 1600,
+    "height": 2400
   }
 ];

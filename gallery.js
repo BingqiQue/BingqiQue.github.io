@@ -1,4 +1,5 @@
 'use strict';
+const collection = document.querySelector('.album-heading h1').textContent;
 const viewer = document.getElementById('viewer');
 const viewerPhoto = document.getElementById('viewer-photo');
 let selected = 0;
@@ -33,13 +34,13 @@ if(document.modelContext?.registerTool) {
  const lifecycle = new AbortController();
  try {
   Promise.resolve(document.modelContext.registerTool({
-   name:'list_photographs',title:'Browse Alaska photographs',
-   description:'List the sixteen numbered photographs in the Alaska collection by GabrielQue.',
+   name:'list_photographs',title:'Browse collection photographs',
+   description:'List the numbered photographs in the current collection by GabrielQue.',
    inputSchema:{type:'object',properties:{},additionalProperties:false},
    annotations:{readOnlyHint:true,untrustedContentHint:false},
    execute(input) {
     if(!input || typeof input !== 'object' || Array.isArray(input) || Object.keys(input).length) throw new Error('This tool accepts no parameters.');
-    return PHOTOS.map(photo=>({...photo,collection:'Alaska'}));
+    return PHOTOS.map(photo=>({...photo,collection}));
    }
   },{signal:lifecycle.signal})).catch(()=>{});
  } catch {}

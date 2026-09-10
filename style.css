@@ -5,3 +5,6 @@
 
 /* Three collection covers on wide screens. */
 @media(min-width:1000px){.collections{grid-template-columns:repeat(3,minmax(0,1fr));gap:4%}.collections .cover-caption{align-items:flex-start;gap:12px;flex-wrap:wrap}.collections .cover-caption h2{font-size:32px}.collections .cover-caption b{margin-left:14px}}
+
+/* Four collections in two balanced rows. */
+.collections{gap:60px 6%}@media(min-width:1000px){.collections{grid-template-columns:repeat(2,minmax(0,1fr))}}.photo-row.single:has(.portrait){width:48%}@media(max-width:700px){.photo-row.single:has(.portrait){width:100%}}
